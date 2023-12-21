@@ -129,7 +129,7 @@ export type Store<S, C> = {
  * @template P The type of the `payload` field of the created events
  * @template V The type of the argument passed to the prepare callback
  */
-export type PrepareCallback<V, P> = (value: V) => { payload: P }
+export type PrepareCallback<V, P> = undefined | ((value: V) => { payload: P })
 
 /**
  * Base type for all event creators.
